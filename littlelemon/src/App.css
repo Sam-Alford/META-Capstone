@@ -15,20 +15,20 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #FFFFFF;
 }
 
 .nav {
   text-align: left;
-  background: #61dafb;
+  background: #FFFFFF;
   padding: 1.5rem;
 }
 
 .nav-item {
   margin-top: 20px;
   padding: 1.5rem;
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
-  color: yellow;
+  color: #495E57;
 }
 
