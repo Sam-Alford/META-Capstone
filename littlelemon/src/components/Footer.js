@@ -4,36 +4,31 @@ import footerlogo from '../assets/footerlogo.png';
 
 const Footer = () => {
   return (
-    <Box border="solid">
+    <Box display="grid" gridTemplateColumns="repeat(4,minmax(0,1fr))">
         <Box backgroundColor="#D9D9D9">
             <Flex
-            margin="0 auto"
-            px={12}
-            color="white"
+            margin="40px"
             justifyContent="flex-start"
             alignItems="center"
             maxWidth="200px"
             height="auto"
-            border="solid"
             >
-                <div>
                     <img
                         className="footerlogo"
                         src={footerlogo}
                         alt="Little Lemon Logo"
                     />
-                </div>
             </Flex>
         </Box>
         <Box backgroundColor="#D9D9D9">
             <Flex
-            margin="0 auto"
-            px={12}
-            color="white"
-            justifyContent="flex-start"
-            alignItems="center"
-            maxWidth="1024px"
-            height="auto"
+                margin="40px"
+                px={12}
+                color="white"
+                justifyContent="flex-start"
+                alignItems="center"
+                maxWidth="1024px"
+                height="auto"
             >
                 <div>
                     <div className="footerTitle">
@@ -52,7 +47,7 @@ const Footer = () => {
         </Box>
         <Box backgroundColor="#D9D9D9">
             <Flex
-            margin="0 auto"
+            margin="40px"
             px={12}
             color="white"
             justifyContent="flex-start"
@@ -74,7 +69,7 @@ const Footer = () => {
         </Box>
         <Box backgroundColor="#D9D9D9">
             <Flex
-            margin="0 auto"
+            margin="40px"
             px={12}
             color="white"
             justifyContent="flex-start"

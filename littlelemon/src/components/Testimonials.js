@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
-import Card from "./Card";
+
+import SmallCard from "./SmallCard";
 
 const reviews = [
   {
@@ -11,17 +12,24 @@ const reviews = [
     getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
-    title: "Bruchetta",
-    rating: "$5.99",
+    title: "Review2",
+    rating: "4",
     description:
-      "A scrollable bottom sheetOur Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+      "Review Text",
     getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
-    title: "Lemon Dessert",
-    rating: "$5.00",
+    title: "Review3",
+    rating: "4",
     description:
-      "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+      "More text.",
+    getImageSrc: () => require("../assets/lemondessert.jpg"),
+  },
+  {
+    title: "Review4",
+    rating: "4",
+    description:
+      "More text.",
     getImageSrc: () => require("../assets/lemondessert.jpg"),
   },
 ];
@@ -35,13 +43,14 @@ const ReviewsSection = () => {
         display="grid"
         gridTemplateColumns="repeat(4,minmax(0,1fr))"
         gridGap={8}
+        alignContent="center"
+      
       >
         {reviews.map((review) => (
-          <Card
+          <SmallCard
             key={review.title}
             title={review.rating}
             description={review.description}
-            imageSrc={review.getImageSrc()}
           />
         ))}
       </Box>

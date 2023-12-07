@@ -1,9 +1,7 @@
-import { Heading, HStack, Image, Text, VStack} from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Heading, HStack, Text, VStack} from "@chakra-ui/react";
 import React from "react";
 
-const SmallCard = ({ title, description, imageSrc }) => {
+const SmallCard = ({ title, description }) => {
 
   const cardProperty = {
     backgroundColor: "white",
@@ -15,7 +13,8 @@ const SmallCard = ({ title, description, imageSrc }) => {
     <HStack style={cardProperty} maxWidth="150px">
       <VStack  >
         <VStack style={{
-          padding: '10px',
+          padding: '10px', 
+          border: "solid",
         }} alignItems="flex-start">
 
           <Heading size="md">{title}</Heading>
