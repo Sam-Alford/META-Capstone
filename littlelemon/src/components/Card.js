@@ -14,7 +14,7 @@ const Card = ({ title, description, imageSrc }) => {
   return (
     <HStack style={cardProperty}>
       <VStack  >
-        <Image objectFit="cover" src={imageSrc} alt={title} borderRadius="10px" />
+        <Image objectFit="cover" src={imageSrc} alt={title} borderRadius="10px" maxHeight="200px"/>
 
         <VStack style={{
           padding: '10px',
@@ -25,7 +25,7 @@ const Card = ({ title, description, imageSrc }) => {
           <Text>{description}</Text>
 
           <Heading size="xs">
-            <a href="#">See More <FontAwesomeIcon icon={faArrowRight} size="1x" />
+            <a href="specials">Order a delivery <FontAwesomeIcon icon={faArrowRight} size="1x" />
           </a>
           </Heading>
 

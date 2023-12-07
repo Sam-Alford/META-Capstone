@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Homepage from '../pages/Homepage';
-import AboutMe from '../pages/AboutMe';
+import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Menu from '../pages/Menu';
 import Reservations from '../pages/Reservations';
@@ -27,7 +27,7 @@ function Nav() {
             </nav>
             <Routes>
                 <Route path="/" element={<Homepage />} />
-                <Route path="/about-us" element={<AboutMe />} />
+                <Route path="/about-us" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/reservations" element={<Reservations />} />
