@@ -1,9 +1,7 @@
 import heroImage from '../assets/heroImage.png'
-import FullScreenSection from "./FullScreenSection";
 
 function Hero (){
     return(
-        <FullScreenSection>
         <div className="hero">
             <h1 className="title">Little Lemon</h1>
             <h2>Chicago</h2>
@@ -17,7 +15,6 @@ function Hero (){
                 />
             </div>
         </div>
-        </FullScreenSection>
     )
 }
 

@@ -62,3 +62,17 @@
   background-color:#F4CE14;
   font-size: 18px;
 }
+
+.footerlogo {
+  padding: 20px;
+  height: 279px;
+  width: 162px;
+}
+
+.footerTitle {
+  color: #495E57;
+  font-size: 20px;
+  font-family: Karla;
+  font-weight: 800;
+  word-wrap: break-word
+}

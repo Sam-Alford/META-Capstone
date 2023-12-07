@@ -2,46 +2,46 @@ import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 
-const specials = [
+const reviews = [
   {
-    title: "Greek Salad",
-    price: "$12.99",
+    title: "Review1",
+    rating: "5",
     description:
-      "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
-    getImageSrc: () => require("../assets/greeksalad.png"),
+      "Review Text",
+    getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
     title: "Bruchetta",
-    price: "$5.99",
+    rating: "$5.99",
     description:
       "A scrollable bottom sheetOur Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
     getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
     title: "Lemon Dessert",
-    price: "$5.00",
+    rating: "$5.00",
     description:
       "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
     getImageSrc: () => require("../assets/lemondessert.jpg"),
   },
 ];
 
-const SpecialsSection = () => {
+const ReviewsSection = () => {
   return (
     <div>
-      <Heading>This weeks specials!</Heading>
-      <button className="resButton">Online Menu</button>
+      <Heading>Testimonials</Heading>
+    
       <Box
         display="grid"
-        gridTemplateColumns="repeat(3,minmax(0,1fr))"
+        gridTemplateColumns="repeat(4,minmax(0,1fr))"
         gridGap={8}
       >
-        {specials.map((special) => (
+        {reviews.map((review) => (
           <Card
-            key={special.title}
-            title={special.title}
-            description={special.description}
-            imageSrc={special.getImageSrc()}
+            key={review.title}
+            title={review.rating}
+            description={review.description}
+            imageSrc={review.getImageSrc()}
           />
         ))}
       </Box>
@@ -49,4 +49,4 @@ const SpecialsSection = () => {
   );
 };
 
-export default SpecialsSection;
+export default ReviewsSection;
