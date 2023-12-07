@@ -6,12 +6,17 @@ import Menu from '../pages/Menu';
 import Reservations from '../pages/Reservations';
 import OrderOnline from '../pages/OrderOnline';
 import Login from '../pages/Login';
+import logo from '../assets/logo.png';
 
 function Nav() {
     return (
         <div>
             <nav className="nav">
-                <image>logo</image>
+                <img
+                    className="logo"
+                    src={logo}
+                    alt="Little Lemon Logo"
+                />
                 <Link to="/" className="nav-item">Home</Link>
                 <Link to="/about-us" className="nav-item">About</Link>
                 <Link to="/contact" className="nav-item">Contact</Link>
