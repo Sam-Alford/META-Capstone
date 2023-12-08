@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 
 const specials = [
@@ -28,9 +28,15 @@ const specials = [
 
 const SpecialsSection = () => {
   return (
-    <div>
-      <Heading>This weeks specials!</Heading>
-      <button className="resButton">Online Menu</button>
+    <Box>
+      <Box display="grid" gridTemplateColumns="1fr 1fr" padding="20px">
+        <Flex>
+          <Heading className="sectionTitle">This weeks specials!</Heading>
+        </Flex>
+        <Flex marginLeft="140px">
+          <button className="resButton">Online Menu</button>
+        </Flex>
+      </Box>
       <Box
         display="grid"
         gridTemplateColumns="repeat(3,minmax(0,1fr))"
@@ -45,7 +51,7 @@ const SpecialsSection = () => {
           />
         ))}
       </Box>
-    </div>
+    </Box>
   );
 };
 

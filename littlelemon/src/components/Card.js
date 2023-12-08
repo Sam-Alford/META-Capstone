@@ -9,28 +9,23 @@ const Card = ({ title, description, imageSrc }) => {
     backgroundColor: "white",
     borderRadius: "10px",
     color: "Black",
+    border: "solid",
   }
   
   return (
-    <HStack style={cardProperty} maxWidth="300px">
+    <HStack style={cardProperty}>
       <VStack  >
         <Image objectFit="cover" src={imageSrc} alt={title} borderRadius="10px" maxHeight="300px" maxWidth="300px"/>
-
         <VStack style={{
-          padding: '10px',
+          padding: '',
         }} alignItems="flex-start">
-
           <Heading size="md">{title}</Heading>
-
           <Text>{description}</Text>
-
           <Heading size="xs">
             <a href="specials">Order a delivery <FontAwesomeIcon icon={faArrowRight} size="1x" />
           </a>
           </Heading>
-
         </VStack>
-
       </VStack>
 
     </HStack>
