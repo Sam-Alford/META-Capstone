@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import Card from "./Card";
+import {Link} from "react-router-dom"
 
 const specials = [
   {
@@ -34,8 +35,9 @@ const SpecialsSection = () => {
           <Heading className="sectionTitle" textAlign="center">This weeks specials!</Heading>
         </Box>
         <Flex marginLeft="140px">
-          <button className="resButton">Online Menu
-          </button>
+          <Link to="/order">
+          <button className="resButton">Online Menu</button>
+          </Link>
         </Flex>
       </Box>
       <Box

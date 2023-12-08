@@ -1,6 +1,9 @@
 function OrderOnline() {
     return(
-        <h1>OrderOnline</h1>
+        <div>
+            <h1>Online ordering coming soon!</h1>
+            <h2>We are building the system.</h2>
+        </div>
     )
 }
 

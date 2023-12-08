@@ -58,3 +58,16 @@
   font-weight: 800;
   word-wrap: break-word
 }
+
+.resBox {
+  background-color: #495E57;
+  color: #FEFEFE;
+}
+
+.confModal {
+  display: grid;
+  border: solid
+}
+.FormLabel {
+  font-size: 20px;
+}

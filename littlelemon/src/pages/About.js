@@ -1,6 +1,8 @@
+import AboutContent from "../components/AboutContent"
+
 function About (){
     return(
-        <h1>About</h1>
+        <AboutContent />
     )
 }
 

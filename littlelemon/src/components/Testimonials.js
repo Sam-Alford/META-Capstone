@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading } from "@chakra-ui/react";
-
+import { Box, Heading } from "@chakra-ui/react";
 import SmallCard from "./SmallCard";
 
 const reviews = [
@@ -8,54 +7,55 @@ const reviews = [
     title: "Sara Lopez",
     rating: "5",
     description:
-      "Review Text",
-    getImageSrc: () => require("../assets/bruchetta.png"),
+      "Best place to eat. Love the Lemon Dessert",
+    getImageSrc: () => require("../assets/5rating.png"),
   },
   {
     title: "Jon Do",
-    rating: "4",
+    rating: "5",
     description:
-      "Review Text",
-    getImageSrc: () => require("../assets/bruchetta.png"),
+      "My favorite place to go out to eat.",
+    getImageSrc: () => require("../assets/5rating.png"),
   },
   {
-    title: "Sara Lopez",
-    rating: "4",
+    title: "Dean Jackson",
+    rating: "5",
     description:
-      "More text.",
-    getImageSrc: () => require("../assets/lemondessert.jpg"),
+      "Everyting on the menu is good here.",
+    getImageSrc: () => require("../assets/5rating.png"),
   },
   {
-    title: "Sara Lopez",
-    rating: "4",
+    title: "Frank Lopez",
+    rating: "5",
     description:
-      "More text.",
-    getImageSrc: () => require("../assets/lemondessert.jpg"),
+      "Generic fourth response for comedic effect",
+    getImageSrc: () => require("../assets/5rating.png"),
   },
 ];
 
 const ReviewsSection = () => {
   return (
-    <Box alignContent="center" background="#495E57">
-      <Box display="grid" gridTemplateColumns="1fr" padding="20px" minHeight="200px">
+    <Box background="#495E57">
+      <Box display="grid" gridTemplateColumns="1fr" padding="20px" minHeight="250px">
         <Box>
           <Heading className="sectionTitle" color="#FEFEFE" textAlign="center">Testimonials</Heading>
         </Box>
-      </Box>
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(4,minmax(0,1fr))"
-        gridGap={8}
-        alignContent="center"
-        margin="40px"
-      >
-        {reviews.map((review) => (
-          <SmallCard
-            key={review.title}
-            title={review.rating}
-            description={review.description}
-          />
-        ))}
+        <Box
+          display="grid"
+          gridTemplateColumns="1fr 1fr 1fr 1fr"
+          alignContent="center"
+          padding="50px"
+        >
+          {reviews.map((review) => (
+            <SmallCard className="smallCard"
+              border="solid"
+              key={review.title}
+              title={review.title}
+              description={review.description}
+              imageSrc={review.getImageSrc()}
+            />
+          ))}
+        </Box>
       </Box>
     </Box>
   );

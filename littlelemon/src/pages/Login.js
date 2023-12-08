@@ -1,6 +1,9 @@
 function Login() {
     return(
-        <h1>Login</h1>
+        <div>
+            <h1>We are still working on this funcitonality.</h1>
+            <h2>Check back soon</h2>
+        </div>
     )
 }
 

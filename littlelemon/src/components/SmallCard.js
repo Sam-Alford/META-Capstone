@@ -1,30 +1,24 @@
-import { Heading, HStack, Text, VStack} from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack} from "@chakra-ui/react";
 import React from "react";
 
 const SmallCard = ({ title, description, imageSrc }) => {
 
   const cardProperty = {
-    backgroundColor: "white",
-    borderRadius: "10px",
+    backgroundColor: "#EDEFEE",
+    borderRadius: "16px",
     color: "Black",
   }
-  
   return (
-    <HStack style={cardProperty} maxWidth="150px">
-      <VStack  >
+    <HStack style={cardProperty} maxWidth="200px" padding="20px">
+      <VStack>
+        <Image objectFit="fill" src={imageSrc} alt={title} borderRadius="10px" maxHeight="320px" maxWidth="265px"/>
         <VStack style={{
-          padding: '10px',
-          background: '#EDEFEE',
-          borderRadius: "16px"
+          padding: '',
+          maxWidth: "200px"
         }} alignItems="flex-start">
-
           <Heading size="md">{title}</Heading>
-
           <Text>{description}</Text>
-
-
         </VStack>
-
       </VStack>
 
     </HStack>
