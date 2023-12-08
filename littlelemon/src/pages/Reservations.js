@@ -1,6 +1,8 @@
+import ResForm from "../components/FormBasis"
+
 function Reservation() {
     return(
-        <h1>Reservation</h1>
+        <ResForm />
     )
 }
 

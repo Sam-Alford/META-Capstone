@@ -1,32 +1,32 @@
 import React from "react";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
 import SmallCard from "./SmallCard";
 
 const reviews = [
   {
-    title: "Review1",
+    title: "Sara Lopez",
     rating: "5",
     description:
       "Review Text",
     getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
-    title: "Review2",
+    title: "Jon Do",
     rating: "4",
     description:
       "Review Text",
     getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
-    title: "Review3",
+    title: "Sara Lopez",
     rating: "4",
     description:
       "More text.",
     getImageSrc: () => require("../assets/lemondessert.jpg"),
   },
   {
-    title: "Review4",
+    title: "Sara Lopez",
     rating: "4",
     description:
       "More text.",
@@ -36,15 +36,18 @@ const reviews = [
 
 const ReviewsSection = () => {
   return (
-    <div>
-      <Heading>Testimonials</Heading>
-    
+    <Box alignContent="center" background="#495E57">
+      <Box display="grid" gridTemplateColumns="1fr" padding="20px" minHeight="200px">
+        <Box>
+          <Heading className="sectionTitle" color="#FEFEFE" textAlign="center">Testimonials</Heading>
+        </Box>
+      </Box>
       <Box
         display="grid"
         gridTemplateColumns="repeat(4,minmax(0,1fr))"
         gridGap={8}
         alignContent="center"
-      
+        margin="40px"
       >
         {reviews.map((review) => (
           <SmallCard
@@ -54,7 +57,7 @@ const ReviewsSection = () => {
           />
         ))}
       </Box>
-    </div>
+    </Box>
   );
 };
 

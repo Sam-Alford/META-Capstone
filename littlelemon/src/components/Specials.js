@@ -28,19 +28,21 @@ const specials = [
 
 const SpecialsSection = () => {
   return (
-    <Box>
+    <Box margin="20px" alignContent="center">
       <Box display="grid" gridTemplateColumns="1fr 1fr" padding="20px">
-        <Flex>
-          <Heading className="sectionTitle">This weeks specials!</Heading>
-        </Flex>
+        <Box>
+          <Heading className="sectionTitle" textAlign="center">This weeks specials!</Heading>
+        </Box>
         <Flex marginLeft="140px">
-          <button className="resButton">Online Menu</button>
+          <button className="resButton">Online Menu
+          </button>
         </Flex>
       </Box>
       <Box
         display="grid"
         gridTemplateColumns="repeat(3,minmax(0,1fr))"
         gridGap={8}
+        margin="60px"
       >
         {specials.map((special) => (
           <Card

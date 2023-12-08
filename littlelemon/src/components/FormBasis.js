@@ -17,7 +17,7 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
-const LandingSection = () => {
+const ResForm = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
@@ -25,7 +25,7 @@ const LandingSection = () => {
     initialValues: {
       firstName: '',
       email: '',
-      type: '',
+      seatingpref: '',
       comment: ''
     },
     onSubmit: (values) => {submit("", values)},
@@ -54,8 +54,8 @@ const LandingSection = () => {
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Heading as="h1" id="contactme-section">
-          Contact me
+        <Heading as="h1" id="reservation-section">
+          Reservations
         </Heading>
         <Box p={6} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
@@ -88,14 +88,14 @@ const LandingSection = () => {
                 </FormErrorMessage>
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="type">Type of enquiry</FormLabel>
+                <FormLabel htmlFor="type">Seating Preference</FormLabel>
                 <Select id="type" name="type" 
                 {...formik.getFieldProps("type")}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
+                  <option value="noPref">No Preference</option>
+                  <option value="indoor">
+                    Inside
                   </option>
-                  <option value="other">Other</option>
+                  <option value="outside">Outside</option>
                 </Select>
               </FormControl>
               <FormControl isInvalid={!!formik.errors.comment && formik.touched.comment}>
@@ -111,7 +111,6 @@ const LandingSection = () => {
                 </FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full"
-              
               isLoading={isLoading}
               >
                 Submit
@@ -124,4 +123,4 @@ const LandingSection = () => {
   );
 };
 
-export default LandingSection;
+export default ResForm;

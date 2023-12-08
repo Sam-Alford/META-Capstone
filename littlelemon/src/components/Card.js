@@ -6,23 +6,22 @@ import React from "react";
 const Card = ({ title, description, imageSrc }) => {
 
   const cardProperty = {
-    backgroundColor: "white",
-    borderRadius: "10px",
+    backgroundColor: "#EDEFEE",
+    borderRadius: "16px",
     color: "Black",
-    border: "solid",
   }
-  
   return (
-    <HStack style={cardProperty}>
-      <VStack  >
-        <Image objectFit="cover" src={imageSrc} alt={title} borderRadius="10px" maxHeight="300px" maxWidth="300px"/>
+    <HStack style={cardProperty} maxWidth="265px">
+      <VStack>
+        <Image objectFit="fill" src={imageSrc} alt={title} borderRadius="10px" maxHeight="320px" maxWidth="265px"/>
         <VStack style={{
           padding: '',
+          maxWidth: "200px"
         }} alignItems="flex-start">
           <Heading size="md">{title}</Heading>
           <Text>{description}</Text>
-          <Heading size="xs">
-            <a href="specials">Order a delivery <FontAwesomeIcon icon={faArrowRight} size="1x" />
+          <Heading fontSize="16px">
+            <a href="/order">Order a delivery <FontAwesomeIcon icon={faArrowRight} size="1x" />
           </a>
           </Heading>
         </VStack>
