@@ -9,7 +9,7 @@ const reviews = [
     description:
       `"Best place to eat. Love the Lemon Dessert"`,
     getImageSrc: () => require("../assets/5rating.png"),
-    profilePic: () => require("../assets/Ellipse1.png")
+
   },
   {
     title: "Jon Doe",
@@ -36,16 +36,17 @@ const reviews = [
 
 const ReviewsSection = () => {
   return (
-    <Box background="#495E57">
+    <Box background="#495E57" height="590px">
       <Box display="grid" gridTemplateColumns="1fr" padding="20px" minHeight="250px">
         <Box>
-          <Heading className="sectionTitle" color="#FEFEFE" textAlign="center">Testimonials</Heading>
+          <Heading className="sectionTitle" color="#FEFEFE" textAlign="center" paddingTop="60px">Testimonials</Heading>
         </Box>
         <Box
           display="grid"
           gridTemplateColumns="1fr 1fr 1fr 1fr"
           alignContent="center"
           padding="50px"
+          marginTop="60px"
         >
           {reviews.map((review) => (
             <SmallCard className="smallCard"

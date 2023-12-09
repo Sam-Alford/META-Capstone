@@ -3,7 +3,7 @@ import Homepage from '../pages/Homepage';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Menu from '../pages/Menu';
-import Reservations from '../pages/Reservations';
+import Reservations from '../pages/Booking';
 import OrderOnline from '../pages/OrderOnline';
 import Login from '../pages/Login';
 import logo from '../assets/logo.png';
@@ -22,7 +22,7 @@ function Nav() {
                 <Link to="/about-us" className="nav-item">About</Link>
                 <Link to="/contact" className="nav-item">Contact</Link>
                 <Link to="/menu" className="nav-item">Menu</Link>
-                <Link to="/reservations" className="nav-item">Reservations</Link>
+                <Link to="/booking" className="nav-item">Reservations</Link>
                 <Link to="/order" className="nav-item">Order Online</Link>
                 <Link to="/login" className="nav-item">Login</Link>
             </nav>
@@ -31,7 +31,7 @@ function Nav() {
                 <Route path="/about-us" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/menu" element={<Menu />} />
-                <Route path="/reservations" element={<Reservations />} />
+                <Route path="/booking" element={<Reservations />} />
                 <Route path="/order" element={<OrderOnline />} />
                 <Route path="/login" element={<Login />} />
             </Routes>

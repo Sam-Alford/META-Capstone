@@ -22,10 +22,10 @@ import * as Yup from 'yup';
 
 
 const ReservationSchema = Yup.object().shape({
-  date: Yup.date().default(() => new Date()),
+  date: Yup.date().required('Date is required').default(() => new Date()),
   time: Yup.string().required('Time is required'),
   partySize: Yup.number().required('Party size is required'),
-  occasion: Yup.string(),
+  occasion: Yup.string().required('Please select the occasion'),
   tablePreference: Yup.string(),
   comment: Yup.string().max(500, 'Comment must be 500 characters or less'),
   firstName: Yup.string().required('First name is required'),
@@ -81,7 +81,7 @@ const ResForm = () => {
       {(props) => (
         <Form>
           <Box className="resBox" textAlign="center" height="120px" paddingTop="40px">
-            <h1>Reservations</h1>
+            <h1 data-test-id="resTitle">Reservations</h1>
           </Box>   
           <Box display="grid" gridTemplateColumns="1fr 1fr 1fr 1fr">
           <Box></Box>
@@ -90,19 +90,37 @@ const ResForm = () => {
             <Field name="date">
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.date && form.touched.date}>
-                  <FormLabel htmlFor="date">Date</FormLabel>
+                  <FormLabel htmlFor="date" data-test-id="dateLabel">Date</FormLabel>
                   <Input className='formInput' {...field} id="date" type="date" defaultValue="12/31/2023" />
-                  <FormErrorMessage>{form.errors.date}</FormErrorMessage>
+                  <FormErrorMessage className='formError'>{form.errors.date}</FormErrorMessage>
                 </FormControl>
               )}
             </Field>
 
-            {/* Time Field */}
+            {/* Time Field
             <Field name="time">
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.time && form.touched.time}>
                   <FormLabel htmlFor="time">Time</FormLabel>
                   <Input className='formInput' {...field} id="time" type="time" placeholder="Select Time" />
+                  <FormErrorMessage className='formError'>{form.errors.time}</FormErrorMessage>
+                </FormControl>
+              )}
+            </Field> */}
+            
+            {/* Updated Time field */}
+            <Field name="time">
+              {({ field, form }) => (
+                <FormControl isInvalid={form.errors.time && form.touched.time}>
+                  <FormLabel htmlFor="time">Time</FormLabel>
+                  <Select className='formInput'{...field} id="time" placeholder="Select Time">
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                  </Select>
                   <FormErrorMessage className='formError'>{form.errors.time}</FormErrorMessage>
                 </FormControl>
               )}
@@ -123,8 +141,8 @@ const ResForm = () => {
 
             {/* Occasion Field */}
             <Field name="occasion">
-              {({ field }) => (
-                <FormControl>
+              {({ field, form }) => (
+                <FormControl isInvalid={form.errors.occasion && form.touched.occasion}>
                   <FormLabel htmlFor="occasion">Occasion</FormLabel>
                   <Select className='formInput'{...field} id="occasion" placeholder="Select Occasion">
                     <option value="JustDining">Just Dining</option>
@@ -132,6 +150,7 @@ const ResForm = () => {
                     <option value="Anniversary">Anniversary</option>
                     <option value="Other">Other</option>
                   </Select>
+                  <FormErrorMessage className='formError'>{form.errors.occasion}</FormErrorMessage>
                 </FormControl>
               )}
             </Field>
@@ -214,6 +233,7 @@ const ResForm = () => {
             type="submit"
             height="50px"
             width="200px"
+            data-test-id="resButton"
 
           >
             Book a table

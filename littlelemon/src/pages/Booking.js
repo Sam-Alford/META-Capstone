@@ -1,4 +1,4 @@
-import ResForm from "../components/ResForm"
+import ResForm from "../components/BookingForm"
 
 function Reservation() {
     return(

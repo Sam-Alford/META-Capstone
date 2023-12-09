@@ -8,7 +8,7 @@ const Hero = () => {
         <Box className="hero">
             <Box marginLeft="60px">
                 <Flex paddingTop="50px">
-                    <h1 className="title">Little Lemon</h1>
+                    <h1 className="title" data-test-id="title">Little Lemon</h1>
                 </Flex>
                 <Flex>
                     <h2 className="subTitle">Chicago</h2>
@@ -17,8 +17,8 @@ const Hero = () => {
                     <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                 </Flex>
                 <Flex paddingTop="40px">
-                    <Link to="/reservations">
-                    <button className="resButton">Reserve a Table</button>
+                    <Link to="/booking">
+                    <button className="resButton" data-test-id="resButton">Reserve a Table</button>
                     </Link>
                 </Flex>
             </Box>
