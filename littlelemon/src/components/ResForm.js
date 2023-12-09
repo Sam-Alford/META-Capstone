@@ -223,12 +223,12 @@ const ResForm = () => {
           <Modal isOpen={isModalOpen} onClose={closeModal} isCentered>
             <ModalOverlay className='overlay'/>
               <ModalContent margin="180px" maxH="500px" maxW="700px" borderColor="#495E57">
-                <ModalHeader padding="100px" backgroundColor="#495E57" color="#FEFEFE" font-family="Karla" font-weight="800">
+                <ModalHeader fontSize="26" padding="50px" backgroundColor="#495E57" color="#FEFEFE" font-family="Karla" font-weight="800">
                 <h1 className='resHeader'>Thank you for your reservation!</h1>
               </ModalHeader>
               <ModalBody backgroundColor="#FEFEFE">
                 {Object.entries(submittedData).map(([key, value]) => (
-                  <Box key={key} textAlign="center">
+                  <Box fontSize="20" key={key} textAlign="center">
                     {`${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`}
                   </Box>
                 ))}

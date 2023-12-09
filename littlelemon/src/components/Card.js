@@ -20,7 +20,7 @@ const Card = ({ title, description, imageSrc }) => {
           <Heading size="md">{title}</Heading>
           <Text>{description}</Text>
           <Heading fontSize="16px">
-            <a href="/order">Order a delivery <img className='scooterIcon' src={scooter} alt="scooter icon"/>
+            <a href="/order">Order a delivery <img className='scooterIcon'src={scooter} alt="scooter icon"/>
           </a>
           </Heading>
         </VStack>

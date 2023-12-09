@@ -11,24 +11,24 @@ const reviews = [
     getImageSrc: () => require("../assets/5rating.png"),
   },
   {
-    title: "Jon Do",
+    title: "Jon Doe",
     rating: "5",
     description:
-      "My favorite place to go out to eat.",
+      "My favorite place to go out to eat. Love it all!",
     getImageSrc: () => require("../assets/5rating.png"),
   },
   {
     title: "Dean Jackson",
     rating: "5",
     description:
-      "Everyting on the menu is good here.",
+      "Everyting on the menu is good here.Try the cheesecake.",
     getImageSrc: () => require("../assets/5rating.png"),
   },
   {
     title: "Frank Lopez",
     rating: "5",
     description:
-      "Generic fourth response for comedic effect",
+      "Generic fourth response for comedic effect. WAKKA WAKKA",
     getImageSrc: () => require("../assets/5rating.png"),
   },
 ];

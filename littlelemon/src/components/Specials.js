@@ -15,7 +15,7 @@ const specials = [
     title: "Bruchetta",
     price: "$5.99",
     description:
-      "A scrollable bottom sheetOur Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+      "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Extra text padding for the rooms cause I need it.",
     getImageSrc: () => require("../assets/bruchetta.png"),
   },
   {
