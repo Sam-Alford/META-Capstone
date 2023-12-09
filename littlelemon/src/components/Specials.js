@@ -48,8 +48,9 @@ const SpecialsSection = () => {
       >
         {specials.map((special) => (
           <Card
-            key={special.title}
+            key={special.price}
             title={special.title}
+            price={special.price}
             description={special.description}
             imageSrc={special.getImageSrc()}
           />

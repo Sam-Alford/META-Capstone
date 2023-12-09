@@ -11,7 +11,7 @@ const Hero = () => {
                     <h1 className="title">Little Lemon</h1>
                 </Flex>
                 <Flex>
-                    <h2>Chicago</h2>
+                    <h2 className="subTitle">Chicago</h2>
                 </Flex>
                 <Flex paddingRight="120px">
                     <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>

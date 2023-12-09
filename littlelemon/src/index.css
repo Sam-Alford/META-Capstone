@@ -3,7 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing:content-box;
   font-family: 'Karla', sans-serif;
 }
 
+.wrapper {
+  background: #EFEFEF;
+  max-width: 1200px;
+  display: flexbox;
+}

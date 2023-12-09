@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@400&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap');
 
 .App {
@@ -5,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Karla', sans-serif;
+  background-color: #f2f2f2;
 }
 
 .nav {
@@ -49,6 +51,13 @@
 
 .title {
   color: #F4CE14;
+  font-family: 'Markazi Text', serif;
+  font-size: 56px;
+}
+
+.subTitle {
+  font-family: 'Markazi Text', serif;
+  font-size: 32px;
 }
 
 .resButton {
@@ -64,6 +73,18 @@
   font-family: Karla;
   font-weight: 800;
   word-wrap: break-word
+}
+
+.cardProperty {
+  background-color: #EDEFEE;
+  border-radius: 16px;
+  color: black;
+  height: 439px;
+}
+
+.imageProperty {
+  height: 186px;
+  width: 265px;
 }
 
 .resBox {
@@ -104,6 +125,10 @@
   text-decoration: none;
   color: black;
   font-size: 18px;
+}
+
+.socialLinks {
+  padding: 8px;
 }
 
 

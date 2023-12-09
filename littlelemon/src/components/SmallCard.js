@@ -11,9 +11,8 @@ const SmallCard = ({ title, description, imageSrc }) => {
   return (
     <HStack style={cardProperty} maxWidth="200px" padding="20px">
       <VStack>
-        <Image objectFit="fill" src={imageSrc} alt={title} borderRadius="10px" maxHeight="320px" maxWidth="265px"/>
+        <Image src={imageSrc} alt={title} maxHeight="320px" maxWidth="265px"/>
         <VStack style={{
-          padding: '',
           maxWidth: "200px"
         }} alignItems="flex-start">
           <Heading size="md">{title}</Heading>

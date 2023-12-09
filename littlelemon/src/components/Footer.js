@@ -2,6 +2,9 @@ import React from "react";
 import {Box, Flex} from "@chakra-ui/react";
 import footerlogo from '../assets/footerlogo.png';
 import { Link } from "react-router-dom";
+import fb from "../assets/devicon_facebook.png"
+import twitter from "../assets/devicon_twitter.png"
+import instagram from "../assets/skill-icons_instagram.png"
 
 const Footer = () => {
   return (
@@ -82,11 +85,23 @@ const Footer = () => {
                     <div className="footerTitle">
                         Social Media Links
                     </div>
-                    <div>
-                        <ul>Facebook</ul>
-                        <ul>Instagram</ul>
-                        <ul>Threads</ul>
-                    </div>
+                    <Box>
+                        <Link className="socialLinks" to="http://wwww.facebook.com">
+                        <img src={fb}
+                            alt="Facebook icon">
+                        </img>
+                        </Link>
+                        <Link className="socialLinks" to="http://wwww.facebook.com">
+                        <img src={twitter}
+                            alt="Twitter icon">
+                        </img>
+                        </Link>
+                        <Link className="socialLinks" to="http://wwww.facebook.com">
+                        <img src={instagram}
+                            alt="Instagram Icon">
+                        </img>
+                        </Link>
+                    </Box>
                 </div>
             </Flex>
         </Box>
