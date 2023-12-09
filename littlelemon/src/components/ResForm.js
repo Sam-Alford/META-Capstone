@@ -15,11 +15,11 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,
+  ChakraProvider,
 } from '@chakra-ui/react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+
 
 const ReservationSchema = Yup.object().shape({
   date: Yup.date().default(() => new Date()),
@@ -80,84 +80,85 @@ const ResForm = () => {
     >
       {(props) => (
         <Form>
-         <Box className="resBox" textAlign="center" padding="30px">
-         <h1>Reservations</h1>
-        </Box>   
-         <Box display="grid" gridTemplateColumns="1fr 1fr 1fr 1fr">
+          <Box className="resBox" textAlign="center" padding="30px">
+            <h1>Reservations</h1>
+          </Box>   
+          <Box display="grid" gridTemplateColumns="1fr 1fr 1fr 1fr">
           <Box></Box>
           <Box padding="30px">
-          {/* Date Field */}
-          <Field name="date">
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.date && form.touched.date}>
-                <FormLabel htmlFor="date">Date</FormLabel>
-                <Input {...field} id="date" type="date" placeholder="Select Date" />
-                <FormErrorMessage>{form.errors.date}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
+            {/* Date Field */}
+            <Field name="date">
+              {({ field, form }) => (
+                <FormControl isInvalid={form.errors.date && form.touched.date}>
+                  <FormLabel htmlFor="date">Date</FormLabel>
+                  <Input className='formInput' {...field} id="date" type="date" placeholder="Select Date" />
+                  <FormErrorMessage>{form.errors.date}</FormErrorMessage>
+                </FormControl>
+              )}
+            </Field>
 
-          {/* Time Field */}
-          <Field name="time">
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.time && form.touched.time}>
-                <FormLabel htmlFor="time">Time</FormLabel>
-                <Input {...field} id="time" type="time" placeholder="Select Time" />
-                <FormErrorMessage>{form.errors.time}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
+            {/* Time Field */}
+            <Field name="time">
+              {({ field, form }) => (
+                <FormControl isInvalid={form.errors.time && form.touched.time}>
+                  <FormLabel htmlFor="time">Time</FormLabel>
+                  <Input className='formInput' {...field} id="time" type="time" placeholder="Select Time" />
+                  <FormErrorMessage>{form.errors.time}</FormErrorMessage>
+                </FormControl>
+              )}
+            </Field>
 
-          {/* Party Size Field */}
-          <Field name="partySize">
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.partySize && form.touched.partySize}>
-                <FormLabel htmlFor="partySize">Party Size</FormLabel>
-                <Select {...field} id="partySize" placeholder="Select Party Size">
-                  {[...Array(10).keys()].map(i => <option value={i+1} key={i}>{i+1}</option>)}
-                </Select>
-                <FormErrorMessage>{form.errors.partySize}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
+            {/* Party Size Field */}
+            <Field name="partySize">
+              {({ field, form }) => (
+                <FormControl isInvalid={form.errors.partySize && form.touched.partySize}>
+                  <FormLabel htmlFor="partySize">Party Size</FormLabel>
+                  <Select className='formInput' {...field} id="partySize" placeholder="Select Party Size">
+                    {[...Array(10).keys()].map(i => <option value={i+1} key={i}>{i+1}</option>)}
+                  </Select>
+                  <FormErrorMessage>{form.errors.partySize}</FormErrorMessage>
+                </FormControl>
+              )}
+            </Field>
 
-          {/* Occasion Field */}
-          <Field name="occasion">
-            {({ field }) => (
-              <FormControl>
-                <FormLabel htmlFor="occasion">Occasion</FormLabel>
-                <Select {...field} id="occasion" placeholder="Just dining">
-                  <option value="Birthday">Birthday</option>
-                  <option value="Anniversary">Anniversary</option>
-                  <option value="Other">Other</option>
-                </Select>
-              </FormControl>
-            )}
-          </Field>
+            {/* Occasion Field */}
+            <Field name="occasion">
+              {({ field }) => (
+                <FormControl>
+                  <FormLabel htmlFor="occasion">Occasion</FormLabel>
+                  <Select className='formInput'{...field} id="occasion" placeholder="Select Occasion">
+                    <option value="JustDining">Just Dining</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Other">Other</option>
+                  </Select>
+                </FormControl>
+              )}
+            </Field>
 
-          {/* Table Preference Field */}
-          <Field name="tablePreference">
-            {({ field }) => (
-              <FormControl>
-                <FormLabel htmlFor="tablePreference">Table Preference</FormLabel>
-                <Select {...field} id="tablePreference" placeholder="No Preference">
-                  <option value="Inside">Inside</option>
-                  <option value="Outside">Outside</option>
-                </Select>
-              </FormControl>
-            )}
-          </Field>
+            {/* Table Preference Field */}
+            <Field name="tablePreference">
+              {({ field }) => (
+                <FormControl>
+                  <FormLabel htmlFor="tablePreference">Table Preference</FormLabel>
+                  <Select className='formInput' {...field} id="tablePreference" placeholder="No Preference">
+                    <option value="Inside">Inside</option>
+                    <option value="Outside">Outside</option>
+                  </Select>
+                </FormControl>
+              )}
+            </Field>
 
-          {/* Comment Field */}
-          <Field name="comment">
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.comment && form.touched.comment}>
-                <FormLabel htmlFor="comment">Comment</FormLabel>
-                <Textarea {...field} id="comment" placeholder="Your Comment" rows={4} />
-                <FormErrorMessage>{form.errors.comment}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
+            {/* Comment Field */}
+            <Field name="comment">
+              {({ field, form }) => (
+                <FormControl isInvalid={form.errors.comment && form.touched.comment}>
+                  <FormLabel htmlFor="comment">Comment</FormLabel>
+                  <Textarea className='formInput' {...field} id="comment" placeholder="" rows={4} />
+                  <FormErrorMessage>{form.errors.comment}</FormErrorMessage>
+                </FormControl>
+              )}
+            </Field>
           </Box>
           <Box padding="30px">
           {/* First Name Field */}
@@ -165,7 +166,7 @@ const ResForm = () => {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.firstName && form.touched.firstName}>
                 <FormLabel htmlFor="firstName">First Name</FormLabel>
-                <Input {...field} id="firstName" placeholder="First Name" />
+                <Input className='formInput'{...field} id="firstName" placeholder="" />
                 <FormErrorMessage>{form.errors.firstName}</FormErrorMessage>
               </FormControl>
             )}
@@ -175,7 +176,7 @@ const ResForm = () => {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.lastName && form.touched.lastName}>
                 <FormLabel htmlFor="lastName">Last Name</FormLabel>
-                <Input {...field} id="lastName" placeholder="Last Name" />
+                <Input className='formInput'{...field} id="lastName" placeholder="" />
                 <FormErrorMessage>{form.errors.lastName}</FormErrorMessage>
               </FormControl>
             )}
@@ -186,7 +187,7 @@ const ResForm = () => {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.phoneNumber && form.touched.phoneNumber}>
                 <FormLabel htmlFor="phoneNumber">Phone Number</FormLabel>
-                <Input {...field} id="phoneNumber" placeholder="Phone Number" />
+                <Input className='formInput' {...field} id="phoneNumber" placeholder="" />
                 <FormErrorMessage>{form.errors.phoneNumber}</FormErrorMessage>
               </FormControl>
             )}
@@ -197,7 +198,7 @@ const ResForm = () => {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.emailAddress && form.touched.emailAddress}>
                 <FormLabel htmlFor="emailAddress">Email Address</FormLabel>
-                <Input {...field} id="emailAddress" type="email" placeholder="Email Address" />
+                <Input className='formInput' {...field} id="emailAddress" type="email" placeholder="" />
                 <FormErrorMessage>{form.errors.emailAddress}</FormErrorMessage>
               </FormControl>
             )}
@@ -218,11 +219,13 @@ const ResForm = () => {
             Book a table
           </Button>
           </Box>
+          <ChakraProvider>
           <Modal isOpen={isModalOpen} onClose={closeModal} isCentered>
-            <ModalOverlay />
-            <ModalContent border="2px" borderColor="gray.200" borderRadius="md">
-              <ModalHeader>Reservation Details</ModalHeader>
-              <ModalCloseButton />
+            <ModalOverlay className='overlay'/>
+              <ModalContent margin="180px" maxH="500px" maxW="700px" borderColor="#495E57">
+                <ModalHeader padding="100px" backgroundColor="#495E57" color="#FEFEFE" font-family="Karla" font-weight="800">
+                <h1 className='resHeader'>Thank you for your reservation!</h1>
+              </ModalHeader>
               <ModalBody backgroundColor="#FEFEFE">
                 {Object.entries(submittedData).map(([key, value]) => (
                   <Box key={key} textAlign="center">
@@ -230,14 +233,18 @@ const ResForm = () => {
                   </Box>
                 ))}
               </ModalBody>
-
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={closeModal}>
+            
+              <ModalFooter backgroundColor="#FEFEFE" display="grid" gridTemplateColumns="1fr 1fr 1fr">
+                <Box></Box>
+                <Box >
+                <Button className='resButton' height="50px" backgroundColor="#F4CE14" borderRadius="16" mr={3} onClick={closeModal}>
                   Close
                 </Button>
+                </Box>
               </ModalFooter>
             </ModalContent>
           </Modal>
+          </ChakraProvider>
         </Form>
       )}
     </Formik>

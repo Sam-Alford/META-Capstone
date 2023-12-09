@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 const Hero = () => {
     return (
-        <Box className="hero" display="grid" gridTemplateColumns="1fr 1fr" alignContent="center">
+        <Box className="hero">
             <Box marginLeft="60px">
                 <Flex paddingTop="50px">
                     <h1 className="title">Little Lemon</h1>
@@ -13,7 +13,7 @@ const Hero = () => {
                 <Flex>
                     <h2>Chicago</h2>
                 </Flex>
-                <Flex maxWidth="500px">
+                <Flex paddingRight="120px">
                     <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                 </Flex>
                 <Flex paddingTop="40px">
@@ -22,7 +22,7 @@ const Hero = () => {
                     </Link>
                 </Flex>
             </Box>
-            <Box margin="">
+            <Box>
                  <img
                     className="heroImage"
                     src={heroImage}

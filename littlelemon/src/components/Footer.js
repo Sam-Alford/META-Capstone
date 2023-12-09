@@ -1,6 +1,7 @@
 import React from "react";
 import {Box, Flex} from "@chakra-ui/react";
 import footerlogo from '../assets/footerlogo.png';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,12 +36,12 @@ const Footer = () => {
                         Doormat Navigation
                     </div>
                     <div>
-                        <ul>Home</ul>
-                        <ul>About</ul>
-                        <ul>menu</ul>
-                        <ul>Reservations</ul>
-                        <ul>Order Online</ul>
-                        <ul>Login</ul>
+                        <ul><Link to="/" className="navFooter">Home</Link></ul>
+                        <ul><Link to="/about-us"className="navFooter">About</Link></ul>
+                        <ul><Link to="/menu"className="navFooter">Menu</Link></ul>
+                        <ul><Link to="/reservations"className="navFooter">Reservations</Link></ul>
+                        <ul><Link to="/order" className="navFooter">Order Online</Link></ul>
+                        <ul><Link to="/login" className="navFooter">Login</Link></ul>
                     </div>
                 </div>
             </Flex>
@@ -59,10 +60,10 @@ const Footer = () => {
                     <div className="footerTitle">
                         Contact
                     </div>
-                    <div>
-                        <ul>Address</ul>
-                        <ul>phone number</ul>
-                        <ul>email</ul>
+                    <div className="navFooter">
+                        <ul>123 Fake St</ul>
+                        <ul>(212) 555-1234</ul>
+                        <ul><Link to="mailto:">LittleLemon@notreal.com</Link></ul>
                     </div>
                 </div>
             </Flex>

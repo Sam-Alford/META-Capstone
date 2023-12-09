@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap');
+
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
 .nav {
   background: #FFFFFF;
   padding: 1.5rem;
@@ -13,17 +22,29 @@
 .logo {
   height: 75px;
 }
-
+.gridBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
 .hero {
   text-align: left;
   background-color: #495E57;
   color: #FFFFFF;
-  align-content:flex-start;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  align-content: center;
+  padding-left: 60px;
 }
 
 .heroImage {
   max-height: 400px;
-  max-width: 343px;
+  max-width: 350px;
+  padding-left: 120px;
+}
+
+.scooterIcon {
+  padding-left: 20px;
 }
 
 .title {
@@ -45,6 +66,26 @@
   word-wrap: break-word
 }
 
+.resBox {
+  background-color: #495E57;
+  color: #FEFEFE;
+  font-size: 34px;
+}
+
+.resHeader {
+  font-size: 40x;
+}
+
+.FormLabel {
+  font-size: 20px;
+}
+
+.formInput {
+  border: 2px solid;
+  width: 200px;
+  border-color: #495E57;
+}
+
 .footerlogo {
   padding: 20px;
   height: 279px;
@@ -52,6 +93,8 @@
 }
 
 .footerTitle {
+  padding-top: 20px;
+  padding-bottom: 10px;
   color: #495E57;
   font-size: 20px;
   font-family: Karla;
@@ -59,15 +102,12 @@
   word-wrap: break-word
 }
 
-.resBox {
-  background-color: #495E57;
-  color: #FEFEFE;
+.navFooter {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
 }
 
-.confModal {
-  display: grid;
-  border: solid
-}
-.FormLabel {
-  font-size: 20px;
-}
+
+

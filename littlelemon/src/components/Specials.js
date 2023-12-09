@@ -30,7 +30,7 @@ const specials = [
 const SpecialsSection = () => {
   return (
     <Box margin="20px" alignContent="center">
-      <Box display="grid" gridTemplateColumns="1fr 1fr" padding="20px">
+      <Box className="gridBox">
         <Box>
           <Heading className="sectionTitle" textAlign="center">This weeks specials!</Heading>
         </Box>
