@@ -66,6 +66,7 @@
   border-radius: 16px;
   background-color:#F4CE14;
   font-size: 18px;
+  font-weight: 800;
 }
 
 .sectionTitle {
@@ -102,6 +103,10 @@
   border: 2px solid;
   width: 200px;
   border-color: #495E57;
+}
+
+.formError {
+  color: red;
 }
 
 .footerlogo {

@@ -9,6 +9,7 @@ const reviews = [
     description:
       `"Best place to eat. Love the Lemon Dessert"`,
     getImageSrc: () => require("../assets/5rating.png"),
+    profilePic: () => require("../assets/Ellipse1.png")
   },
   {
     title: "Jon Doe",
@@ -52,6 +53,7 @@ const ReviewsSection = () => {
               title={review.title}
               description={review.description}
               imageSrc={review.getImageSrc()}
+              profilePic={review.getImageSrc()}
             />
           ))}
         </Box>

@@ -1,7 +1,7 @@
-import { Heading, HStack, Image, Text, VStack} from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack, Box} from "@chakra-ui/react";
 import React from "react";
 
-const SmallCard = ({ title, description, imageSrc }) => {
+const SmallCard = ({ title, description, imageSrc, profilePic }) => {
 
   const cardProperty = {
     backgroundColor: "#EDEFEE",
@@ -11,7 +11,10 @@ const SmallCard = ({ title, description, imageSrc }) => {
   return (
     <HStack style={cardProperty} maxWidth="200px" padding="20px">
       <VStack>
-        <Image src={imageSrc} alt={title} maxHeight="320px" maxWidth="265px"/>
+        <Box>
+          <Image src={imageSrc} alt={title} maxHeight="320px" maxWidth="265px"/>
+          <Image src={profilePic} alt={title} maxHeight="320px" maxWidth="265px"/>
+        </Box>
         <VStack style={{
           maxWidth: "200px"
         }} alignItems="flex-start">

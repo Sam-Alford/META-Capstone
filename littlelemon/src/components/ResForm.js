@@ -80,7 +80,7 @@ const ResForm = () => {
     >
       {(props) => (
         <Form>
-          <Box className="resBox" textAlign="center" padding="30px">
+          <Box className="resBox" textAlign="center" height="120px" paddingTop="40px">
             <h1>Reservations</h1>
           </Box>   
           <Box display="grid" gridTemplateColumns="1fr 1fr 1fr 1fr">
@@ -91,7 +91,7 @@ const ResForm = () => {
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.date && form.touched.date}>
                   <FormLabel htmlFor="date">Date</FormLabel>
-                  <Input className='formInput' {...field} id="date" type="date" placeholder="Select Date" />
+                  <Input className='formInput' {...field} id="date" type="date" defaultValue="12/31/2023" />
                   <FormErrorMessage>{form.errors.date}</FormErrorMessage>
                 </FormControl>
               )}
@@ -103,7 +103,7 @@ const ResForm = () => {
                 <FormControl isInvalid={form.errors.time && form.touched.time}>
                   <FormLabel htmlFor="time">Time</FormLabel>
                   <Input className='formInput' {...field} id="time" type="time" placeholder="Select Time" />
-                  <FormErrorMessage>{form.errors.time}</FormErrorMessage>
+                  <FormErrorMessage className='formError'>{form.errors.time}</FormErrorMessage>
                 </FormControl>
               )}
             </Field>
@@ -116,7 +116,7 @@ const ResForm = () => {
                   <Select className='formInput' {...field} id="partySize" placeholder="Select Party Size">
                     {[...Array(10).keys()].map(i => <option value={i+1} key={i}>{i+1}</option>)}
                   </Select>
-                  <FormErrorMessage>{form.errors.partySize}</FormErrorMessage>
+                  <FormErrorMessage className='formError'>{form.errors.partySize}</FormErrorMessage>
                 </FormControl>
               )}
             </Field>
@@ -155,7 +155,7 @@ const ResForm = () => {
                 <FormControl isInvalid={form.errors.comment && form.touched.comment}>
                   <FormLabel htmlFor="comment">Comment</FormLabel>
                   <Textarea className='formInput' {...field} id="comment" placeholder="" rows={4} />
-                  <FormErrorMessage>{form.errors.comment}</FormErrorMessage>
+                  <FormErrorMessage className='formError'>{form.errors.comment}</FormErrorMessage>
                 </FormControl>
               )}
             </Field>
@@ -167,7 +167,7 @@ const ResForm = () => {
               <FormControl isInvalid={form.errors.firstName && form.touched.firstName}>
                 <FormLabel htmlFor="firstName">First Name</FormLabel>
                 <Input className='formInput'{...field} id="firstName" placeholder="" />
-                <FormErrorMessage>{form.errors.firstName}</FormErrorMessage>
+                <FormErrorMessage className='formError'>{form.errors.firstName}</FormErrorMessage>
               </FormControl>
             )}
           </Field>    
@@ -177,7 +177,7 @@ const ResForm = () => {
               <FormControl isInvalid={form.errors.lastName && form.touched.lastName}>
                 <FormLabel htmlFor="lastName">Last Name</FormLabel>
                 <Input className='formInput'{...field} id="lastName" placeholder="" />
-                <FormErrorMessage>{form.errors.lastName}</FormErrorMessage>
+                <FormErrorMessage className='formError'>{form.errors.lastName}</FormErrorMessage>
               </FormControl>
             )}
           </Field>
@@ -188,7 +188,7 @@ const ResForm = () => {
               <FormControl isInvalid={form.errors.phoneNumber && form.touched.phoneNumber}>
                 <FormLabel htmlFor="phoneNumber">Phone Number</FormLabel>
                 <Input className='formInput' {...field} id="phoneNumber" placeholder="" />
-                <FormErrorMessage>{form.errors.phoneNumber}</FormErrorMessage>
+                <FormErrorMessage className='formError'>{form.errors.phoneNumber}</FormErrorMessage>
               </FormControl>
             )}
           </Field>
@@ -199,7 +199,7 @@ const ResForm = () => {
               <FormControl isInvalid={form.errors.emailAddress && form.touched.emailAddress}>
                 <FormLabel htmlFor="emailAddress">Email Address</FormLabel>
                 <Input className='formInput' {...field} id="emailAddress" type="email" placeholder="" />
-                <FormErrorMessage>{form.errors.emailAddress}</FormErrorMessage>
+                <FormErrorMessage className='formError'>{form.errors.emailAddress}</FormErrorMessage>
               </FormControl>
             )}
           </Field>
