@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, Text, VStack, Box} from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const SmallCard = ({ title, description, imageSrc, profilePic }) => {
