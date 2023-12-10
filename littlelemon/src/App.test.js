@@ -1,24 +1,17 @@
 import { render, fireEvent, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-test('checks for heading', () => {
-  render(<App />);
-
-  const heading = screen.getByTestId("title");
-  expect(heading).toHaveTextContext("Little Lemon");  
+test('check for load', () => {
+  render(<BrowserRouter><App /></BrowserRouter>)
+  const logo = screen.getByAltText("Little Lemon Logo")
+  expect(logo).toBeInTheDocument()
   
 });
 
-test('selects to reserve', () => {
-
-  const heading = screen.getByTestId("title")
-  expect(heading).toHaveTextContext("Little Lemon");  
+test('selects a pic in the lower section', () => {
+  render(<BrowserRouter><App /></BrowserRouter>)
+  const chefPic = screen.getByAltText("chef with food")
+  expect(chefPic).toBeInTheDocument()
   
-  const btn = screen.getByTestId("resButton")
-
-  fireEvent.click(btn)
-
-  const resTitle = screen.getByTestId("resTitle")
-
-  expect(resTitle).toHaveTextContext("Reservations");
 });

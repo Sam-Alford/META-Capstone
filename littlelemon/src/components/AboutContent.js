@@ -17,7 +17,7 @@ function AboutContent (){
                     <img
                         className="aboutpic"
                         src={AboutPic}
-                        alt="chef with food"
+                        alt="chefs with food"
                     />
                 </Flex>
             </Box>

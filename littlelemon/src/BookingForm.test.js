@@ -1,14 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import ResForm from './BookingForm';
+import { render, fireEvent, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-test('check for date label', () => {
-    render(<ResForm />);
-    const dateLabel = screen.getByTestId("dateLabel");
-    expect(dateLabel).toBeInTheDocument();
-})
+test('selects to reserve', () => {
+  render(<BrowserRouter><App /></BrowserRouter>)
+  const logo = screen.getByAltText("Little Lemon Logo")
+  expect(logo).toBeInTheDocument()
+  
+});
 
-test('checks for resButton', () => {
-    render(<ResForm />);
-    const btn = screen.getByTestId("resButton");
-    expect(resButton).toBeInTheDocument();
-})

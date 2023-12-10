@@ -91,7 +91,7 @@ const ResForm = () => {
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.date && form.touched.date}>
                   <FormLabel htmlFor="date" data-test-id="dateLabel">Date</FormLabel>
-                  <Input className='formInput' {...field} id="date" type="date" defaultValue="12/31/2023" />
+                  <Input className='formInput' {...field} id="date" type="date" defaultValue="" data-test-id="dateField"/>
                   <FormErrorMessage className='formError'>{form.errors.date}</FormErrorMessage>
                 </FormControl>
               )}

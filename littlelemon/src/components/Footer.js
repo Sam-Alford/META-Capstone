@@ -20,7 +20,7 @@ const Footer = () => {
                     <img
                         className="footerlogo"
                         src={footerlogo}
-                        alt="Little Lemon Logo"
+                        alt="Little Lemon Logo Footer"
                     />
             </Flex>
         </Box>
