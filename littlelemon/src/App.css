@@ -226,7 +226,8 @@
 .allFooter {
   display: flex;
   flex-Wrap: wrap;
-  justify-Content: space-evenly;
+  justify-Content: center;
+  gap: 30px;
   background-Color: #D9D9D9
 }
 
