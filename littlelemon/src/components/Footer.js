@@ -25,7 +25,7 @@ const Footer = () => {
                         <ul><Link to="/" className="navFooter">Home</Link></ul>
                         <ul><Link to="/about-us"className="navFooter">About</Link></ul>
                         <ul><Link to="/menu"className="navFooter">Menu</Link></ul>
-                        <ul><Link to="/reservations"className="navFooter">Reservations</Link></ul>
+                        <ul><Link to="/booking"className="navFooter">Reservations</Link></ul>
                         <ul><Link to="/order" className="navFooter">Order Online</Link></ul>
                         <ul><Link to="/login" className="navFooter">Login</Link></ul>
                     </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
         </Box>
-        <Box  className="footerBox">           
+        <Box  className="footerBox">
                 <Box>
                     <Box className="footerTitle">
                         Social Media Links

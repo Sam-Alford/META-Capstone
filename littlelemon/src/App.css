@@ -177,10 +177,9 @@
   background-color: #495E57;
   color: #FEFEFE;
   font-size: 34px;
-}
-
-.resHeader {
-  font-size: 40x;
+  text-Align:center;
+  height: 120px;
+  padding-Top: 40px;
 }
 
 /*Reservation form*/
@@ -188,11 +187,38 @@
   border: 2px solid;
   width: 200px;
   border-color: #495E57;
+  border-radius: 8px;
 }
 
 .formError {
   color: red;
 }
+
+.fullResBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resDetailsBox {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.personDetailsBox {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resButtonBox {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 
 /*footer section */
 .footerlogo {

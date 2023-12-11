@@ -80,12 +80,11 @@ const ResForm = () => {
     >
       {(props) => (
         <Form>
-          <Box className="resBox" textAlign="center" height="120px" paddingTop="40px">
+          <Box className="resBox">
             <h1 data-test-id="resTitle">Reservations</h1>
           </Box>   
-          <Box display="grid" gridTemplateColumns="1fr 1fr 1fr 1fr">
-          <Box></Box>
-          <Box padding="30px">
+          <Box className="fullResBox">
+            <Box className="resDetailsBox">
             {/* Date Field */}
             <Field name="date">
               {({ field, form }) => (
@@ -96,19 +95,8 @@ const ResForm = () => {
                 </FormControl>
               )}
             </Field>
-
-            {/* Time Field
-            <Field name="time">
-              {({ field, form }) => (
-                <FormControl isInvalid={form.errors.time && form.touched.time}>
-                  <FormLabel htmlFor="time">Time</FormLabel>
-                  <Input className='formInput' {...field} id="time" type="time" placeholder="Select Time" />
-                  <FormErrorMessage className='formError'>{form.errors.time}</FormErrorMessage>
-                </FormControl>
-              )}
-            </Field> */}
             
-            {/* Updated Time field */}
+            {/* Time field */}
             <Field name="time">
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.time && form.touched.time}>
@@ -179,7 +167,7 @@ const ResForm = () => {
               )}
             </Field>
           </Box>
-          <Box padding="30px">
+          <Box className="personDetailsBox">
           {/* First Name Field */}
           <Field name="firstName">
             {({ field, form }) => (
@@ -224,21 +212,20 @@ const ResForm = () => {
           </Field>
           </Box>
         </Box>
-        <Box display="grid" gridTemplateColumns="1fr 1fr 1fr" padding="40px" marginLeft="100px">
-          <Box></Box>
-          <Button className='resButton'
-            mt={4}
-            colorScheme="blue"
-            isLoading={props.isSubmitting}
-            type="submit"
-            height="50px"
-            width="200px"
-            data-test-id="resButton"
-
-          >
-            Book a table
-          </Button>
+          <Box className="resButtonBox">
+            <Button className='resButton'
+              mt={4}
+              colorScheme="blue"
+              isLoading={props.isSubmitting}
+              type="submit"
+              height="50px"
+              width="200px"
+              data-test-id="resButton"
+            >
+              Book a table
+            </Button>
           </Box>
+
           <ChakraProvider>
           <Modal isOpen={isModalOpen} onClose={closeModal} isCentered>
             <ModalOverlay className='overlay'/>
@@ -254,9 +241,8 @@ const ResForm = () => {
                 ))}
               </ModalBody>
             
-              <ModalFooter backgroundColor="#FEFEFE" display="grid" gridTemplateColumns="1fr 1fr 1fr">
-                <Box></Box>
-                <Box >
+              <ModalFooter backgroundColor="#FEFEFE" display="flex" justifyContent="center">
+                <Box>
                 <Button className='resButton' height="50px" backgroundColor="#F4CE14" borderRadius="16" mr={3} onClick={closeModal}>
                   Close
                 </Button>
