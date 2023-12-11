@@ -198,19 +198,19 @@
 
 .fullResBox{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding-top: 40px;
 }
 
 .resDetailsBox {
-  padding-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .personDetailsBox {
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
 }
