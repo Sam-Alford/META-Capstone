@@ -223,6 +223,13 @@
 
 
 /*footer section */
+.allFooter {
+  display: flex;
+  flex-Wrap: wrap;
+  justify-Content: space-evenly;
+  background-Color: #D9D9D9
+}
+
 .footerlogo {
   padding: 20px;
   height: 279px;
@@ -249,6 +256,10 @@
   text-decoration: none;
   color: black;
   font-size: 18px;
+}
+
+.socialLinkBox {
+  display: flex;
 }
 
 .socialLinks {

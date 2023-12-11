@@ -8,7 +8,7 @@ import instagram from "../assets/skill-icons_instagram.png"
 
 const Footer = () => {
   return (
-    <Box display="flex" flexWrap="wrap" justifyContent="space-evenly" backgroundColor="#D9D9D9">
+    <Box className="allFooter">
         <Box className="footerBox">
                     <img
                         className="footerlogo"
@@ -48,21 +48,21 @@ const Footer = () => {
                     <Box className="footerTitle">
                         Social Media Links
                     </Box>
-                    <Box>
+                    <Box className="socialLinkBox">
                         <Link className="socialLinks" to="http://wwww.facebook.com">
-                        <img src={fb}
-                            alt="Facebook icon">
-                        </img>
+                            <img src={fb}
+                                alt="Facebook icon">
+                            </img>
                         </Link>
                         <Link className="socialLinks" to="http://wwww.facebook.com">
-                        <img src={twitter}
-                            alt="Twitter icon">
-                        </img>
+                            <img src={twitter}
+                                alt="Twitter icon">
+                            </img>
                         </Link>
                         <Link className="socialLinks" to="http://wwww.facebook.com">
-                        <img src={instagram}
-                            alt="Instagram Icon">
-                        </img>
+                            <img src={instagram}
+                                alt="Instagram Icon">
+                            </img>
                         </Link>
                     </Box>
                 </Box>            
