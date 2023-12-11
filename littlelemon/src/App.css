@@ -6,7 +6,7 @@
   font-family: 'Karla', sans-serif;
   background-color: #f2f2f2;
 }
-
+/* Nav section */
 .nav {
   background: #FFFFFF;
   padding: 1.5rem;
@@ -16,7 +16,8 @@
 }
 
 .nav-item {
-  padding: 1rem;
+  margin: 1rem;
+  padding-top: 10px;
   font-size: 20px;
   display: flex;
   text-decoration: none;
@@ -25,8 +26,10 @@
 
 .logo {
   height: 75px;
+  padding-right: 50px;
 }
 
+/* Hero section */
 .hero {
   text-align: left;
   background-color: #495E57;
@@ -41,8 +44,9 @@
   max-height: 400px;
   max-width: 350px;
   display: flex;
-  overflow: hidden;
-  padding-top: 20px;
+  justify-content: right;
+  overflow: clip;
+  border-radius: 16px;
 }
 
 .scooterIcon {
@@ -70,15 +74,6 @@
 }
 
 /* Specials section */
-.sectionTitle {
-  font-size: 40px;
-  font-family: Karla;
-  font-weight: 800;
-  word-wrap: break-word;
-  color: #FEFEFE;
-  text-align: center;
-  padding: 40px;
-}
 
 .sectionTitleSpecials {
   font-size: 40px;
@@ -86,11 +81,18 @@
   font-weight: 800;
   word-wrap: break-word;
   text-align: center;
+  padding-right: 160px;
+}
+
+.orderBoxSpecials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
 }
 
 .gridBox {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -109,8 +111,22 @@
 
 .cardBox {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 35px;
+  padding-bottom: 60px;
+}
+
+
+/* Testimonials section */
+.sectionTitle {
+  font-size: 40px;
+  font-family: Karla;
+  font-weight: 800;
+  word-wrap: break-word;
+  color: #FEFEFE;
+  text-align: center;
+  padding: 40px;
 }
 
 .reviewsSection {
@@ -120,7 +136,8 @@
  .reviewCards{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 24px;
   padding-bottom: 50px;
  }
 
@@ -129,7 +146,9 @@
   background-color: #EDEFEE;
   border-radius: 16px;
   color: Black;
-  width: 240px;
+  width: 198px;
+  height: 178px;
+
  }
 
  .smallCardContent {
@@ -138,21 +157,20 @@
   border: solid;
  }
 
+ /* About secction */
 
 .aboutBox {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   margin: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
 } 
 
 .aboutText {
   max-width: 240px;
 }
 
-.aboutPic {
-
-}
 /*Reservation section*/
 
 .resBox {
@@ -209,7 +227,3 @@
   padding: 8px;
 }
 
-.orderBoxSpecials {
-  display: flex;
-  flex-wrap: wrap;
-}

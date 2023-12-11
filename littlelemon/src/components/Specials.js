@@ -29,14 +29,14 @@ const specials = [
 
 const SpecialsSection = () => {
   return (
-    <Box margin="20px">
+    <Box>
       <Box className="gridBox">
           <Heading className="sectionTitleSpecials">This weeks specials!</Heading>        
           <Flex className="orderBoxSpecials">
             <Link to="/order">
-            <button className="resButton">Online Menu</button>
-          </Link>
-        </Flex>
+              <button className="resButton">Online Menu</button>
+            </Link>
+          </Flex>
       </Box>
       <Box className="cardBox">
         {specials.map((special) => (
