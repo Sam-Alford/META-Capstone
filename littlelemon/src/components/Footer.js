@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
 import footerlogo from '../assets/footerlogo.png';
 import { Link } from "react-router-dom";
 import fb from "../assets/devicon_facebook.png"
@@ -8,32 +8,15 @@ import instagram from "../assets/skill-icons_instagram.png"
 
 const Footer = () => {
   return (
-    <Box display="grid" gridTemplateColumns="repeat(4,minmax(0,1fr))">
-        <Box backgroundColor="#D9D9D9">
-            <Flex
-            margin="40px"
-            justifyContent="flex-start"
-            alignItems="center"
-            maxWidth="200px"
-            height="auto"
-            >
+    <Box display="flex" flexWrap="wrap" justifyContent="space-evenly" backgroundColor="#D9D9D9">
+        <Box className="footerBox">
                     <img
                         className="footerlogo"
                         src={footerlogo}
                         alt="Little Lemon Logo Footer"
                     />
-            </Flex>
         </Box>
-        <Box backgroundColor="#D9D9D9">
-            <Flex
-                margin="40px"
-                px={12}
-                color="white"
-                justifyContent="flex-start"
-                alignItems="center"
-                maxWidth="1024px"
-                height="auto"
-            >
+        <Box className="footerBox">
                 <div>
                     <div className="footerTitle">
                         Doormat Navigation
@@ -47,18 +30,8 @@ const Footer = () => {
                         <ul><Link to="/login" className="navFooter">Login</Link></ul>
                     </div>
                 </div>
-            </Flex>
         </Box>
-        <Box backgroundColor="#D9D9D9">
-            <Flex
-            margin="40px"
-            px={12}
-            color="white"
-            justifyContent="flex-start"
-            alignItems="center"
-            maxWidth="1024px"
-            height="auto"
-            >
+        <Box  className="footerBox">
                 <div>
                     <div className="footerTitle">
                         Contact
@@ -69,22 +42,12 @@ const Footer = () => {
                         <ul><Link to="mailto:">LittleLemon@notreal.com</Link></ul>
                     </div>
                 </div>
-            </Flex>
         </Box>
-        <Box backgroundColor="#D9D9D9">
-            <Flex
-            margin="40px"
-            px={12}
-            color="white"
-            justifyContent="flex-start"
-            alignItems="center"
-            maxWidth="1024px"
-            height="auto"
-            >
-                <div>
-                    <div className="footerTitle">
+        <Box  className="footerBox">           
+                <Box>
+                    <Box className="footerTitle">
                         Social Media Links
-                    </div>
+                    </Box>
                     <Box>
                         <Link className="socialLinks" to="http://wwww.facebook.com">
                         <img src={fb}
@@ -102,8 +65,7 @@ const Footer = () => {
                         </img>
                         </Link>
                     </Box>
-                </div>
-            </Flex>
+                </Box>            
         </Box>
     </Box>
   );

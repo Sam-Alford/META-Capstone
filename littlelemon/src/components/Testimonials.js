@@ -36,20 +36,14 @@ const reviews = [
 
 const ReviewsSection = () => {
   return (
-    <Box background="#495E57" height="590px">
-      <Box display="grid" gridTemplateColumns="1fr" padding="20px" minHeight="250px">
+    <Box className="reviewsSection">
+      <Box>
         <Box>
-          <Heading className="sectionTitle" color="#FEFEFE" textAlign="center" paddingTop="60px">Testimonials</Heading>
+          <Heading className="sectionTitle">Testimonials</Heading>
         </Box>
-        <Box
-          display="grid"
-          gridTemplateColumns="1fr 1fr 1fr 1fr"
-          alignContent="center"
-          padding="50px"
-          marginTop="60px"
-        >
+        <Box className="reviewCards">
           {reviews.map((review) => (
-            <SmallCard className="smallCard"
+            <SmallCard
               key={review.title}
               title={review.title}
               description={review.description}

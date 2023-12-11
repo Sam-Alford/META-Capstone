@@ -29,23 +29,16 @@ const specials = [
 
 const SpecialsSection = () => {
   return (
-    <Box margin="20px" alignContent="center">
+    <Box margin="20px">
       <Box className="gridBox">
-        <Box>
-          <Heading className="sectionTitle" textAlign="center">This weeks specials!</Heading>
-        </Box>
-        <Flex marginLeft="140px">
-          <Link to="/order">
-          <button className="resButton">Online Menu</button>
+          <Heading className="sectionTitleSpecials">This weeks specials!</Heading>        
+          <Flex className="orderBoxSpecials">
+            <Link to="/order">
+            <button className="resButton">Online Menu</button>
           </Link>
         </Flex>
       </Box>
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(3,minmax(0,1fr))"
-        gridGap={8}
-        margin="60px"
-      >
+      <Box className="cardBox">
         {specials.map((special) => (
           <Card
             key={special.price}

@@ -13,7 +13,7 @@ const Hero = () => {
                 <Flex>
                     <h2 className="subTitle">Chicago</h2>
                 </Flex>
-                <Flex paddingRight="120px">
+                <Flex maxWidth="200px">
                     <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                 </Flex>
                 <Flex paddingTop="40px">
@@ -22,7 +22,7 @@ const Hero = () => {
                     </Link>
                 </Flex>
             </Box>
-            <Box>
+            <Box className="heroImageBox">
                  <img
                     className="heroImage"
                     src={heroImage}

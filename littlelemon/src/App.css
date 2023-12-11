@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap');
 
 .App {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  display: flex;
   font-family: 'Karla', sans-serif;
   background-color: #f2f2f2;
 }
@@ -12,11 +10,15 @@
 .nav {
   background: #FFFFFF;
   padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-item {
   padding: 1rem;
   font-size: 20px;
+  display: flex;
   text-decoration: none;
   color: #495E57;
 }
@@ -24,27 +26,23 @@
 .logo {
   height: 75px;
 }
-.gridBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 20px;
-}
+
 .hero {
   text-align: left;
   background-color: #495E57;
   color: #FFFFFF;
-  display: grid;
-  grid-template-columns:1fr 1fr;
+  display: flex;
   align-content: center;
-  padding-left: 60px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .heroImage {
   max-height: 400px;
   max-width: 350px;
-  padding-left: 120px;
   display: flex;
   overflow: hidden;
+  padding-top: 20px;
 }
 
 .scooterIcon {
@@ -71,13 +69,32 @@
   font-weight: 800;
 }
 
+/* Specials section */
 .sectionTitle {
   font-size: 40px;
   font-family: Karla;
   font-weight: 800;
-  word-wrap: break-word
+  word-wrap: break-word;
+  color: #FEFEFE;
+  text-align: center;
+  padding: 40px;
 }
 
+.sectionTitleSpecials {
+  font-size: 40px;
+  font-family: Karla;
+  font-weight: 800;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.gridBox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .cardProperty {
   background-color: #EDEFEE;
   border-radius: 16px;
@@ -90,6 +107,54 @@
   width: 265px;
 }
 
+.cardBox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.reviewsSection {
+  background: #495E57;
+
+}
+ .reviewCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+ }
+
+ .smallCard {
+  display: flex;
+  background-color: #EDEFEE;
+  border-radius: 16px;
+  color: Black;
+  width: 240px;
+ }
+
+ .smallCardContent {
+  display: flex;
+  justify-content: left;
+  border: solid;
+ }
+
+
+.aboutBox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 60px;
+} 
+
+.aboutText {
+  max-width: 240px;
+}
+
+.aboutPic {
+
+}
+/*Reservation section*/
+
 .resBox {
   background-color: #495E57;
   color: #FEFEFE;
@@ -100,7 +165,7 @@
   font-size: 40x;
 }
 
-
+/*Reservation form*/
 .formInput {
   border: 2px solid;
   width: 200px;
@@ -111,10 +176,16 @@
   color: red;
 }
 
+/*footer section */
 .footerlogo {
   padding: 20px;
   height: 279px;
   width: 162px;
+}
+
+.footerBox {
+  background-color: #D9D9D9;
+  display: flex;
 }
 
 .footerTitle {
@@ -138,5 +209,7 @@
   padding: 8px;
 }
 
-
-
+.orderBoxSpecials {
+  display: flex;
+  flex-wrap: wrap;
+}
