@@ -194,8 +194,13 @@
 .formInput {
   border: 2px solid;
   width: 200px;
+  height: 40px;
   border-color: #495E57;
   border-radius: 8px;
+}
+
+Input, Select {
+  padding-left: 15px;
 }
 
 .formError {

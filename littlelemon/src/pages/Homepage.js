@@ -5,12 +5,12 @@ import AboutContent from "../components/AboutContent"
 
 function Homepage (){
     return(
-        <div>
+        <body>
             <Hero />
             <Specials />
             <Testimonials />
             <AboutContent />
-        </div>
+        </body>
     )
 }
 
