@@ -31,13 +31,13 @@
 
 /* Hero section */
 .hero {
-  text-align: left;
+  text-align:start;
   background-color: #495E57;
   color: #FFFFFF;
   display: flex;
   align-content: center;
   justify-content: center;
-  gap: 130px;
+  gap: 80px;
   flex-wrap: wrap;
 }
 
@@ -79,8 +79,6 @@
   font-family: Karla;
   font-weight: 800;
   word-wrap: break-word;
-  padding-right: 120px;
-  padding-left: 100;
   display: flex;
   text-align: center;
 }
@@ -93,6 +91,7 @@
 
 .gridBox {
   display: flex;
+  gap: 40px;
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 90px;

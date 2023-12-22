@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 const Hero = () => {
     return (
         <Box className="hero">
-            <Box marginLeft="60px">
+            <Box>
                 <Flex paddingTop="50px">
                     <h1 className="title" data-test-id="title">Little Lemon</h1>
                 </Flex>
